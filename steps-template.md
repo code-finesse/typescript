@@ -1,6 +1,6 @@
 # Steps for {insert topic}
 
-<details>
+<details open>
   <summary>Terms and Explanations</summary>
   
   ## Heading
