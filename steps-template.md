@@ -1,13 +1,30 @@
-# Steps for {insert topic}
+# Steps for understanding and using Typescript
 
 <details open>
   <summary>Terms and Explanations</summary>
   
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
+  ## Typescript has 12 basic types
+  https://www.typescriptlang.org/docs/handbook/basic-types.html
+<ol>
+
+ 1. **boolean** -> true or false
+ 2. **number** -> just a number
+ 3. **string** -> just a string
+ 4. **array** -> [1, 2, 3]
+ 5. **object** -> non-primitive types
+ 6. **undefined** -> unassigned value
+ 7. **null** -> something doesn't exist
+ 8. **any** -> dynamic type like (like normal js)
+ 9. **void** -> a function that doesn't return
+ 10. **never** function that never returns
+ 11. **tuple** -> [string, number, number] (multiple types inside an array)
+ 12. **enum** -> outcome {win, lose, draw} (0, 1, 2)
+
+</ol>
+
+## Typscript compilation
+* Typescript code compiles to => Javascript and is easily read by => the Browser
+
 </details>
 <br/>
 
