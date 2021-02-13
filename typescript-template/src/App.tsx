@@ -12,20 +12,26 @@ function App():JSX.Element {
     const [value, setValue] = useState<string>('')
     const [todos, setTodos] = useState<ITodo[]>([])
     
-    const addTodo = (text:string):void => {
+    const addTodo = (text:string): void => {
         const newTodos: ITodo[] = [...todos, {text, complete: false}]
         setTodos(newTodos)
     }
     
-    const handleSubmit = (e:FormElem):void => {
+    const handleSubmit = (e:FormElem): void => {
         e.preventDefault()
         addTodo(value)
         setValue('')
     }
 
-    const completeTodo = (index: number):void => {
+    const completeTodo = (index: number): void => {
         const newTodos: ITodo[] = [...todos]
         newTodos[index].complete = !newTodos[index].complete
+        setTodos(newTodos)
+    }
+
+    const removeTodo = (index: number): void => {
+        const newTodos: ITodo[] = [...todos]
+        newTodos.splice(index, 1)
         setTodos(newTodos)
     }
 
@@ -44,6 +50,7 @@ function App():JSX.Element {
                         <button onClick={() => completeTodo(index)}>
                             {todo.complete ? 'Incomplete' : 'Complete'}
                         </button>
+                        <button onClick={() => removeTodo(index)}>&times;</button>
                     </div>
                 )
             })}
