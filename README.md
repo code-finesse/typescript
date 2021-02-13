@@ -14,8 +14,8 @@ You should understand the following before trying to learn about this:
 ## Before Getting Started
 Things to have installed or set up before diving into the code:
 
-* npm
-* create-react-app
+* node.js
+* any cli for frontend frameworks
 
 
 ## Extra Things to Note
