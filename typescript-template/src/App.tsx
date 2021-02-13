@@ -46,7 +46,9 @@ function App():JSX.Element {
             {todos.map((todo: ITodo, index: number) => {
                 return (
                     <div key={index}>
+                        <span style={{ textDecoration: todo.complete ? 'line-through' : ''}}>
                         <p>{todo.text}</p>
+                        </span>
                         <button onClick={() => completeTodo(index)}>
                             {todo.complete ? 'Incomplete' : 'Complete'}
                         </button>
